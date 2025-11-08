@@ -200,7 +200,7 @@ def process_images(
     for idx, (image_data, mime_type) in enumerate(image_data_list):
         print(f"\nImage {idx} ({mime_type}):")
         if not validate_image(image_data):
-            print(f"  ❌ Invalid image data, skipping")
+            print(f" Invalid image data, skipping")
             continue
         encoded = encode_image(image_data)
         is_sketch = classify_image(client, encoded, mime_type)
